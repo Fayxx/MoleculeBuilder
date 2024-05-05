@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/raylib_template.dir/all
+all: CMakeFiles/MoleculeBuilder.dir/all
 all: libs/raylib/all
 .PHONY : all
 
@@ -72,7 +72,7 @@ preinstall: libs/raylib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/raylib_template.dir/clean
+clean: CMakeFiles/MoleculeBuilder.dir/clean
 clean: libs/raylib/clean
 .PHONY : clean
 
@@ -141,31 +141,31 @@ libs/raylib/src/external/glfw/src/clean: libs/raylib/src/external/glfw/src/CMake
 .PHONY : libs/raylib/src/external/glfw/src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/raylib_template.dir
+# Target rules for target CMakeFiles/MoleculeBuilder.dir
 
 # All Build rule for target.
-CMakeFiles/raylib_template.dir/all: libs/raylib/src/CMakeFiles/raylib_static.dir/all
-CMakeFiles/raylib_template.dir/all: libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=25,26 "Built target raylib_template"
-.PHONY : CMakeFiles/raylib_template.dir/all
+CMakeFiles/MoleculeBuilder.dir/all: libs/raylib/src/CMakeFiles/raylib_static.dir/all
+CMakeFiles/MoleculeBuilder.dir/all: libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=1,2 "Built target MoleculeBuilder"
+.PHONY : CMakeFiles/MoleculeBuilder.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/raylib_template.dir/rule: cmake_check_build_system
+CMakeFiles/MoleculeBuilder.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles 26
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/raylib_template.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MoleculeBuilder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles 0
-.PHONY : CMakeFiles/raylib_template.dir/rule
+.PHONY : CMakeFiles/MoleculeBuilder.dir/rule
 
 # Convenience name for target.
-raylib_template: CMakeFiles/raylib_template.dir/rule
-.PHONY : raylib_template
+MoleculeBuilder: CMakeFiles/MoleculeBuilder.dir/rule
+.PHONY : MoleculeBuilder
 
 # clean rule for target.
-CMakeFiles/raylib_template.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/clean
-.PHONY : CMakeFiles/raylib_template.dir/clean
+CMakeFiles/MoleculeBuilder.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/clean
+.PHONY : CMakeFiles/MoleculeBuilder.dir/clean
 
 #=============================================================================
 # Target rules for target libs/raylib/src/CMakeFiles/raylib_static.dir
@@ -175,7 +175,7 @@ libs/raylib/src/CMakeFiles/raylib_static.dir/all: libs/raylib/src/external/glfw/
 libs/raylib/src/CMakeFiles/raylib_static.dir/all: libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f libs/raylib/src/CMakeFiles/raylib_static.dir/build.make libs/raylib/src/CMakeFiles/raylib_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/raylib/src/CMakeFiles/raylib_static.dir/build.make libs/raylib/src/CMakeFiles/raylib_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=17,18,19,20,21,22,23,24 "Built target raylib_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=19,20,21,22,23,24,25,26 "Built target raylib_static"
 .PHONY : libs/raylib/src/CMakeFiles/raylib_static.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,7 +201,7 @@ libs/raylib/src/CMakeFiles/raylib_static.dir/clean:
 libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/all:
 	$(MAKE) $(MAKESILENT) -f libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/build.make libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/build.make libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target glfw_objlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target glfw_objlib"
 .PHONY : libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -227,7 +227,7 @@ libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/clean:
 libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/all: libs/raylib/src/external/glfw/src/CMakeFiles/glfw_objlib.dir/all
 	$(MAKE) $(MAKESILENT) -f libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/build.make libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/build.make libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=1 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles --progress-num=3 "Built target glfw"
 .PHONY : libs/raylib/src/external/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.

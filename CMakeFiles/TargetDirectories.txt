@@ -1,4 +1,4 @@
-/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles/raylib_template.dir
+/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles/MoleculeBuilder.dir
 /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles/package.dir
 /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles/package_source.dir
 /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/CMakeFiles/edit_cache.dir

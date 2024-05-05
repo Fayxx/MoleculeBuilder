@@ -5,18 +5,19 @@
 #include <iostream>
 
 std::string ASSET_PATH("/Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/assets/");
-constexpr auto WINDOW_WIDTH  = 1500;
-constexpr auto WINDOW_HEIGHT = 900;
+constexpr int WINDOW_WIDTH  = 1500;
+constexpr int WINDOW_HEIGHT = 900;
 constexpr auto WINDOW_TITLE  = "Molecule Builder";
+constexpr float SPRITE_SIZE   = 200;
 constexpr Color BACKGROUND_COLOR({23, 23, 23, 255});
 Font SYMBOL_FONT;
 
 // ARRAY vs. HASHMAP
-std::unordered_map<int, std::string> SYM          =  {  {1,"H"},         {6,"C"},        {8,"O"}   };
-std::unordered_map<int, float>       INNER_RADIUS =  {  {1,20.0},        {6,40.0},       {8,30.0}  };
-std::unordered_map<int, float>       OUTER_RADIUS =  {  {1,25.0},        {6,55.0},       {8,45.0}  };
-std::unordered_map<int, Color>       COLOR        =  {  {1,RAYWHITE},    {6,DARKGRAY},   {8,RED}   };
-std::unordered_map<int, std::vector<int> >         REPR      =  {  {1, {1}},          {6, {4}},         {8, {4}}    };
+std::unordered_map<int, std::string>        SYM          =  {  {1,"H"},         {6,"C"},        {8,"O"}   };
+std::unordered_map<int, float>              SCALE_FACTOR =  {  {1,0.25},         {6, 0.5},       {8,0.35}  };
+std::unordered_map<int, float>              OUTER_RADIUS =  {  {1,25.0},        {6,55.0},       {8,45.0}  };
+std::unordered_map<int, Color>              COLOR        =  {  {1,RAYWHITE},    {6,DARKGRAY},   {8,RED}   };
+std::unordered_map<int, std::vector<int> >  REPR         =  {  {1, {1}},          {6, {4}},         {8, {4}}    };
 /*
 ? Currently supported atoms: C, H, O
 */
@@ -24,9 +25,9 @@ class Atom {
     private:
     int anum;          // atomic number
     Vector2 pos;       // position on screen in terms of x and y
-    bool is_active;
+    bool is_active;    //
     bool is_dragged;   // while this is on, the atom follows the cursor
-    Texture2D sprite;
+    Texture2D sprite;  
 
     public:
     Atom(Vector2 _pos, int _anum){
@@ -40,8 +41,7 @@ class Atom {
     bool is_hovered() {
         auto [x,y] = pos;
         auto [mx,my] = GetMousePosition();
-        int ir = OUTER_RADIUS[anum];
-        return mx >= x-ir && mx <= x+ir && my >= y-ir && my <= y+ir;
+        //TODO rework
     }
 
     void _handle_drag(){
@@ -49,7 +49,9 @@ class Atom {
         if(is_hovered() && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) is_active = true;
         if(is_hovered() && left_mouse_down) is_dragged = true;
         if(is_dragged && !left_mouse_down) is_dragged = false;
-        if(is_dragged) pos = GetMousePosition();
+        if(is_dragged){
+            //TODO rework
+        }
     }
 
     void refresh_state() {
@@ -57,7 +59,7 @@ class Atom {
     }      
 
     void render() {
-        DrawTextureEx(sprite, {pos.x - 100, pos.y - 100}, 0.0, 0.5, WHITE);
+        DrawTextureEx(sprite, {pos.x, pos.y}, 0.0, SCALE_FACTOR[anum], WHITE);
     }
 };
 
@@ -89,6 +91,7 @@ int main()
 
     for(Atom* atom : atoms)
         delete atom;
+
     UnloadFont(SYMBOL_FONT);
     return 0;
 }

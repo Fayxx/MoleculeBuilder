@@ -1,0 +1,1 @@
+make && ./MoleculeBuilder && rm MoleculeBuilder

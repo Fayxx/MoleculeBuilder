@@ -182,17 +182,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named raylib_template
+# Target rules for targets named MoleculeBuilder
 
 # Build rule for target.
-raylib_template: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raylib_template
-.PHONY : raylib_template
+MoleculeBuilder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MoleculeBuilder
+.PHONY : MoleculeBuilder
 
 # fast build rule for target.
-raylib_template/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/build
-.PHONY : raylib_template/fast
+MoleculeBuilder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/build
+.PHONY : MoleculeBuilder/fast
 
 #=============================================================================
 # Target rules for targets named raylib_static
@@ -238,7 +238,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -246,7 +246,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -254,7 +254,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raylib_template.dir/build.make CMakeFiles/raylib_template.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MoleculeBuilder.dir/build.make CMakeFiles/MoleculeBuilder.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -271,10 +271,10 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... MoleculeBuilder"
 	@echo "... glfw"
 	@echo "... glfw_objlib"
 	@echo "... raylib_static"
-	@echo "... raylib_template"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
