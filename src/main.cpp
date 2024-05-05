@@ -27,7 +27,10 @@ class Atom {
     Vector2 pos;       // position on screen in terms of x and y
     bool is_active;    //
     bool is_dragged;   // while this is on, the atom follows the cursor
-    Texture2D sprite;  
+    Texture2D sprite;
+    float sprite_diameter;
+    float sprite_radius;
+    Vector2 middle_point;
 
     public:
     Atom(Vector2 _pos, int _anum){
@@ -36,12 +39,15 @@ class Atom {
         is_active = false;
         is_dragged = false;
         sprite = LoadTexture((ASSET_PATH + SYM[anum] + ".png").c_str());
+        sprite_diameter = SPRITE_SIZE * SCALE_FACTOR[anum];
+        sprite_radius = sprite_diameter / 2;
+        middle_point = {pos.x + sprite_radius, pos.y + sprite_radius};
     }
 
     bool is_hovered() {
-        auto [x,y] = pos;
-        auto [mx,my] = GetMousePosition();
-        //TODO rework
+        auto [x, y] = middle_point;
+        auto [mx, my] = GetMousePosition();
+        return mx >= x - sprite_radius && mx <= x + sprite_radius && my >= y - sprite_radius && my <= y + sprite_radius;
     }
 
     void _handle_drag(){
@@ -50,16 +56,17 @@ class Atom {
         if(is_hovered() && left_mouse_down) is_dragged = true;
         if(is_dragged && !left_mouse_down) is_dragged = false;
         if(is_dragged){
-            //TODO rework
+            pos = {GetMousePosition().x - sprite_radius, GetMousePosition().y - sprite_radius };
+            middle_point = {pos.x + sprite_radius, pos.y + sprite_radius};
         }
     }
 
     void refresh_state() {
         _handle_drag();
-    }      
+    }
 
     void render() {
-        DrawTextureEx(sprite, {pos.x, pos.y}, 0.0, SCALE_FACTOR[anum], WHITE);
+        DrawTextureEx(sprite, pos, 0.0, SCALE_FACTOR[anum], WHITE);
     }
 };
 
