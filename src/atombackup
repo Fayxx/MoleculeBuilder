@@ -1,12 +1,12 @@
+//
+// Created by Marlon Käsemann on 06.05.24.
+//
 
-#include <unordered_map>
-#include <string>
-#include <vector>
-#include <iostream>
+#include "Atom.h"
 
-#include "raylib.h"
-#include "config.h"
-
+/*
+? Currently supported atoms: C, H, O
+*/
 class Atom {
 private:
     int anum;          // atomic number
@@ -52,49 +52,3 @@ public:
         DrawTextureEx(sprite, pos, 0.0, SCALE_FACTOR[anum], WHITE);
     }
 };
-
-int main() {
-    InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
-    SYMBOL_FONT = LoadFont((ASSET_PATH + "symbols.ttf").c_str());
-    SetTargetFPS(60);
-    Atom* a = new Atom({100.0, 100.0}, 1);
-    std::vector<Atom*> atoms;
-    atoms.push_back(a);
-
-    int curr_selected = 0;
-    int curr_key;
-
-    while (!WindowShouldClose()) {
-        BeginDrawing();
-        ClearBackground(BACKGROUND_COLOR);
-
-        while((curr_key = GetKeyPressed())){
-            switch(curr_key){
-                case KEY_ONE:
-                    atoms.push_back(new Atom(GetMousePosition(), 1));
-                    break;
-                case KEY_SIX:
-                    atoms.push_back(new Atom(GetMousePosition(), 6));
-                    break;
-                case KEY_EIGHT:
-                    atoms.push_back(new Atom(GetMousePosition(), 8));
-                    break;
-            }
-        }
-
-        for(Atom* atom : atoms){
-            atom->refresh_state();
-        } 
-        for(Atom* atom : atoms){
-            atom->render();
-        } 
-        EndDrawing();
-    }
-    CloseWindow();
-
-    for(Atom* atom : atoms)
-        delete atom;
-
-    UnloadFont(SYMBOL_FONT);
-    return 0;
-}

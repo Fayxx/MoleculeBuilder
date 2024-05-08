@@ -793,8 +793,12 @@ CMakeFiles/MoleculeBuilder.dir/src/main.cpp.o: src/main.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  libs/raylib/src/raylib.h
+  libs/raylib/src/raylib.h \
+  src/Atom.h \
+  src/config.h
 
+
+src/config.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/limits.h:
 
@@ -925,6 +929,8 @@ CMakeFiles/MoleculeBuilder.dir/src/main.cpp.o: src/main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/streambuf:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdexcept:
+
+src/Atom.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h:
 

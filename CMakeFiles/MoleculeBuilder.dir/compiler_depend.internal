@@ -795,4 +795,6 @@ CMakeFiles/MoleculeBuilder.dir/src/main.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h
  /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/libs/raylib/src/raylib.h
+ /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/src/Atom.h
+ /Users/marlonkasemann/Desktop/Coding/Projects/MoleculeBuilder/src/config.h
 
